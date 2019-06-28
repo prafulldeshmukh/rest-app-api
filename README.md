@@ -8,53 +8,53 @@ The follow below step for install application & run
 1. Get the clone of below repository
   https://github.com/prafulldeshmukh/rest-app-api.git
 
- 2.Install docker on your system 
-   use the below url for installation
-     https://docs.docker.com/install/linux/docker-ce/ubuntu/
+2. Install docker on your system 
+    use the below url for installation
+    https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
     
-    I) Update the apt package index:
+      I) Update the apt package index:
 
       $ sudo apt-get update
 
-    Install packages to allow apt to use a repository over HTTPS:
+      Install packages to allow apt to use a repository over HTTPS:
 
-      $ sudo apt-get install \
+       $ sudo apt-get install \
         apt-transport-https \
         ca-certificates \
         curl \
         gnupg-agent \
         software-properties-common
 
-   $ sudo docker -v
+        $ sudo docker -v
 
-   $ sudo docker run hello-world
+        $ sudo docker run hello-world
 
-   $ sudo docker images
+        $ sudo docker images
 
-   $ sudo docker ps -a
+        $ sudo docker ps -a
      
 3. Install docker-compose for up and running aplication
    # https://docs.docker.com/compose/install/
 
    $ sudo pip install docker-compose
 
-4.First build application with docker
+4. First build application with docker
 
-  $ sudo docker build
+   $ sudo docker build .
 
-  It's deploy & build all apllication which u mentioned in dockerfile 
+   It's deploy & build all apllication which u mentioned in dockerfile 
    Python, Django & Django restframework
 
- 5. After successfully build you have to run the command for .yml file (Imp Step)
+5. After successfully build you have to run the command for .yml file (Imp Step)
 
     $ sudo docker-compose build
 
- 6.Make service up and running in docker-container
+6. Make service up and running in docker-container
 
     $ sudo docker-compose up 
 
- 7.Use the below API on command prompt
+7. Use the below API on command prompt
 
    $ curl http://localhost:8000/getMacDetails/44:38:39:ff:ef:57
 
@@ -64,8 +64,8 @@ The follow below step for install application & run
 
     $http://<your server ip>:8000/getMacDetails/44:38:39:ff:ef:57
 
-   Response Output:
-   {"mac_address": "44:38:39:ff:ef:57", "companyName": "Cumulus Networks, Inc"}  
+    Response Output:
+    {"mac_address": "44:38:39:ff:ef:57", "companyName": "Cumulus Networks, Inc"}  
 
  8. Added validation part if u enter wrong mac address with jsonresponse 
  9. API will be consume through below URL    
