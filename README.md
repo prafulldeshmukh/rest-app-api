@@ -25,6 +25,7 @@ The follow below step for install application & run
         curl \
         gnupg-agent \
         software-properties-common
+
    $ sudo docker -v
 
    $ sudo docker run hello-world
@@ -45,20 +46,27 @@ The follow below step for install application & run
   It's deploy & build all apllication which u mentioned in dockerfile 
    Python, Django & Django restframework
 
- 5. After successfully build you have to run the command for .yml file
+ 5. After successfully build you have to run the command for .yml file (Imp Step)
+
     $ sudo docker-compose build
+
  6.Make service up and running in docker-container
+
     $ sudo docker-compose up 
+
  7.Use the below API on command prompt
+
    $ curl http://localhost:8000/getMacDetails/44:38:39:ff:ef:57
 
     user will get the output of mac address & company name with json resposne
        OR
     On Web browser
+
     $http://<your server ip>:8000/getMacDetails/44:38:39:ff:ef:57
 
    Response Output:
    {"mac_address": "44:38:39:ff:ef:57", "companyName": "Cumulus Networks, Inc"}  
+
  8. Added validation part if u enter wrong mac address with jsonresponse 
  9. API will be consume through below URL    
     $http://<your server ip>:8000/getMacDetails/44:38:39:ff:ef:57
