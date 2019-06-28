@@ -26,6 +26,10 @@ The follow below step for install application & run
         gnupg-agent \
         software-properties-common
 
+        Install the latest version of Docker CE and containerd, or go to the next step to install a specific version:
+
+        $ sudo apt-get install docker-ce docker-ce-cli containerd.io
+
         $ sudo docker -v
 
         $ sudo docker run hello-world
