@@ -1,14 +1,15 @@
 # rest-app-api
 Mac Address APP API Source Code
 
-#Instruction for use application rest-api-app for showing MAC address with associated details with company name
+#Instruction for use application rest-api-app for showing MAC address with associated details like company name
 
 The follow below step for install application & run 
-1.Get the clone of below repository
+# Installation Step
+1. Get the clone of below repository
   https://github.com/prafulldeshmukh/rest-app-api.git
 
  2.Install docker on your system 
-   # use the below url for installation
+   use the below url for installation
      https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
     
@@ -25,8 +26,11 @@ The follow below step for install application & run
         gnupg-agent \
         software-properties-common
    $ sudo docker -v
+
    $ sudo docker run hello-world
+
    $ sudo docker images
+
    $ sudo docker ps -a
      
 3. Install docker-compose for up and running aplication
@@ -34,10 +38,12 @@ The follow below step for install application & run
 
    $ sudo pip install docker-compose
 
-4.first build application with docker
+4.First build application with docker
+
   $ sudo docker build
-  #It deploy & build all apllication which u mentioned in dockerfile 
-  # Python, Djnago & djnago restframework
+
+  It's deploy & build all apllication which u mentioned in dockerfile 
+   Python, Django & Django restframework
 
  5. After successfully build you have to run the command for .yml file
     $ sudo docker-compose build
@@ -45,15 +51,16 @@ The follow below step for install application & run
     $ sudo docker-compose up 
  7.Use the below API on command prompt
    $ curl http://localhost:8000/getMacDetails/44:38:39:ff:ef:57
-   #user will get the output of mac address & company name with json resposne
-       OR
-   # On Web browser
-     $http://<your server ip>:8000/getMacDetails/44:38:39:ff:ef:57
 
-   # Response Output:
+    user will get the output of mac address & company name with json resposne
+       OR
+    On Web browser
+    $http://<your server ip>:8000/getMacDetails/44:38:39:ff:ef:57
+
+   Response Output:
    {"mac_address": "44:38:39:ff:ef:57", "companyName": "Cumulus Networks, Inc"}  
  8. Added validation part if u enter wrong mac address with jsonresponse 
  9. API will be consume through below URL    
-    #$http://<your server ip>:8000/getMacDetails/44:38:39:ff:ef:57
+    $http://<your server ip>:8000/getMacDetails/44:38:39:ff:ef:57
          
 
